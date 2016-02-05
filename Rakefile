@@ -2,6 +2,12 @@ require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'shellwords'
 
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
+
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   #t.libs << 'test'
@@ -9,19 +15,18 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-namespace :dummy do
-  namespace :npm do
-    desc "Run npm install for dummy app"
-    task :install do
-      dummy_dir = Bundler.root.join 'test/dummy'
+#namespace :murails do
+#  desc "copy packge.json to rails root"
+#  task :install do
+#    packpath = File.expand_path("../src/packge.json", __FILE__)
+#    p pack
+#
+#    #sh "cd #{Shellwords.shellescape(dummy_dir)} && npm install" do |ok, res|
+#    #  fail "Error running npm install in #{dummy_dir}." unless ok
+#    #end
+#  end
+#end
 
-      sh "cd #{Shellwords.shellescape(dummy_dir)} && npm install" do |ok, res|
-        fail "Error running npm install in #{dummy_dir}." unless ok
-      end
-    end
-  end
-end
+#task :test => ['dummy:npm:install']
 
-task :test => ['dummy:npm:install']
-
-task :default => :test
+#task :default => :test
