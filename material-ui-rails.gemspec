@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'material-ui-rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "material-ui-rails"
+  spec.name          = "materialUi-rails"
   spec.version       = MaterialUiRails::VERSION
   spec.authors       = ["Towon Zhou"]
   spec.email         = ["towonzhou@gmail.com"]
