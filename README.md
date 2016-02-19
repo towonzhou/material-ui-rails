@@ -5,7 +5,7 @@ install
 1. add gem
 ```
   gem 'browserify-rails'
-  gem 'material-ui-rails', git: 'https://github.com/towonzhou/material-ui-rails.git'
+  gem 'materialUi-rails'
 ```
 
 2. init
