@@ -1,6 +1,7 @@
 material-ui-rails
 
-===== install
+install
+=====
 1. add gem
 ```
   gem 'browserify-rails'
