@@ -1,20 +1,15 @@
-material-ui-rails
+materialui-rails
 
 install
 =====
 1. add gem
 ```
   gem 'browserify-rails'
-  gem 'materialUi-rails'
+  gem 'materialui-rails'
 ```
 
 2. init
 ```
-  (不知道为什么这个task不存在, 需要添加
-  spec = Gem::Specification.find_by_name 'materialUi-rails'
-  load "#{spec.gem_dir}/lib/material-ui-rails/tasks/muirails.rake"
-  这两行到Rakefile中
-  )
   rake muirails:install
   npm install
 ```
