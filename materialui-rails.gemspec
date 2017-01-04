@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
 
-  spec.add_runtime_dependency "railties", ">= 4.0.0", "< 5.0"
+  spec.add_runtime_dependency "railties", ">= 4.0.0"
   spec.add_runtime_dependency "sprockets", "~> 3.0"
   spec.add_runtime_dependency 'react-rails', '~> 1.4', '>= 1.4.0'
   spec.add_runtime_dependency 'browserify-rails', '>= 2.2.1'
